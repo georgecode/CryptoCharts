@@ -6,6 +6,7 @@ import ChooseCoinCon from "./ChooseCoinCon"
 //import SearchTest from "./SearchTest"
 import Header from "./Header"
 //import TestJunk from "./TestJunk"
+import ChartCon from "./ChartCon"
 
 //let btccoinzz = "btc"
 
@@ -36,6 +37,8 @@ class Home extends Component {
 		return(
 			<div>
 				<Header />
+				<ChartCon />
+
 				
 				<ChooseCoinCon />
 				<Typography variant="h2" className={classes.themeExample}>Home</Typography>

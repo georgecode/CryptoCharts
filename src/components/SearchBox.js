@@ -7,6 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import coinData from "./coinData";
 
 
+
 const styles = theme => ({
   headerCon:{
     backgroundColor:theme.palette.primary.main
@@ -42,7 +43,7 @@ class SearchBox extends Component {
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
-    console.log(typeof selectedOption.value.toUpperCase().split(" ")[0])
+    console.log(selectedOption.value.toUpperCase().split(" ")[0])
   }
   render() {
     const { classes } = this.props
