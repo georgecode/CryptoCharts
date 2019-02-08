@@ -3,7 +3,8 @@ import { withStyles } from "@material-ui/core/styles";
 //import { stuff, stuff } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import ChooseCoinCon from "./ChooseCoinCon"
-import SearchTest from "./SearchTest"
+//import SearchTest from "./SearchTest"
+import Header from "./Header"
 //import TestJunk from "./TestJunk"
 
 //let btccoinzz = "btc"
@@ -34,7 +35,8 @@ class Home extends Component {
 		const { classes } = this.props
 		return(
 			<div>
-				<SearchTest />
+				<Header />
+				
 				<ChooseCoinCon />
 				<Typography variant="h2" className={classes.themeExample}>Home</Typography>
 			</div>
@@ -43,7 +45,7 @@ class Home extends Component {
 }
 
 export default withStyles(styles)(Home);
-
+//<SearchTest />
 //<TestJunk />
 
 //<img src={this.state.module} alt="coin"/>

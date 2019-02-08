@@ -16,7 +16,6 @@ class App extends Component {
       <MuiThemeProvider theme={this.theme}>
          <CssBaseline />
         <div>
-            <h1>App.js</h1>
             <Home />
         </div>
       </MuiThemeProvider>
