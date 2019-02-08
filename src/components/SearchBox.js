@@ -1,8 +1,11 @@
-import React from 'react';
+//import React from 'react';
+import React, { Component } from "react";
 import Select from 'react-select';
-import bat from "@icon/cryptocurrency-icons/icons/bat.svg";
+//import bat from "@icon/cryptocurrency-icons/icons/bat.svg";
 import coinOptions from "./coinOptions";
 import { withStyles } from "@material-ui/core/styles";
+import coinData from "./coinData";
+
 
 const styles = theme => ({
   headerCon:{
@@ -18,13 +21,28 @@ const styles = theme => ({
 
 });
  
-class SearchBox extends React.Component {
-  state = {
-    selectedOption: null,
+class SearchBox extends Component {
+  constructor(props) {
+   super(props);
+    this.state = {
+      selectedOption: null,
+    }
   }
+  // state = {
+  //   selectedOption: null,
+  // }
+  componentDidMount() {
+
+    coinData('BTC').then(resp=>{
+      console.log(resp)
+    })
+
+  }
+
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
+    console.log(typeof selectedOption.value.toUpperCase().split(" ")[0])
   }
   render() {
     const { classes } = this.props
