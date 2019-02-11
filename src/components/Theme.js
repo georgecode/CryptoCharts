@@ -4,6 +4,13 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 //how to use mui theme
 //https://material-ui.com/customization/themes/#type-light-dark-theme-
+
+
+//myTheme
+//http://paletton.com/#uid=34H0u0kllllaFw0g0qFqFg0w0aF
+//https://material.io/tools/color/#!/?view.left=0&view.right=1&primary.color=582A72&secondary.color=7A9F35
+
+
 //med Grey #e1e2e1 
 //rgb(225,226,225)
 

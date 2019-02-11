@@ -18,19 +18,25 @@ const styles = theme => ({
 });
 
 class Header extends Component {
-	//constructor(props) {
-	//	super(props);
-	//	this.state = {
-    //  	hello: true,
-    //	};
-	//}
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+ //     	hello: true,
+
+ //    	};
+	// }
 
 	render() {
 		const { classes } = this.props
 		return(
 			<div className={classes.headerCon}>
 				<Typography className={classes.title}>Header</Typography>
-				<SearchBox className={classes.searchBox}/>
+				<SearchBox 
+					//sendSearchData was passed from Home.js to Here(Header.js)
+					//and will be passed from here to SearchBox.js
+					sendSearchData={this.props.sendSearchData} 
+					className={classes.searchBox}
+					/>
 			</div>
 			)
 	}

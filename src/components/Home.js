@@ -18,26 +18,49 @@ const styles = theme => ({
 
 
 class Home extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
- //     	module: null,
- //    	};
-	// }
+	constructor(props) {
+		super(props);
+		this.state = {
+     	module: null,
+     	selectedCoin:"btc"
+    	};
+    	this.getSearchData = this.getSearchData.bind(this)
+	}
 	// componentDidMount() {
  //    	const { path } = this.props;
  //    	import(`@icon/cryptocurrency-icons/icons/${btccoinzz}.svg`)
  //      	.then(module => this.setState({ module: module.default }))
 
  //  	}
+ 	//getSearchData will be passed down to SearchBox.js via Header.js
+ 	//It allows the search data to be passed to this page(Home.js)
+	getSearchData(val){
+	    // do not forget to bind this to constructor
+	    //this.getData = this.getData.bind(this)
+	    //Parent HTML
+	    //<Child sendData={this.getData}/>
+	    this.setState({
+		    selectedCoin: val
+		});
+	    console.log(val);
+	}
+
+
+
+
 
 	render() {
 		console.log(this.state)
 		const { classes } = this.props
 		return(
 			<div>
-				<Header />
-				<ChartCon />
+				<Header 
+				//This will be passed down form here(Home.js)
+				//to Header.js to Searchbox.js
+				//it allows searchbox to pass data to here(Home.js)
+				sendSearchData={this.getSearchData} 
+				/>
+				<ChartCon selectedCoin={this.state.selectedCoin} />
 
 				
 				<ChooseCoinCon />
