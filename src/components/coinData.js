@@ -9,8 +9,8 @@ import axios from "axios";
 const coinData = (coin, limit = 2000, precision = "histoday") => {
 	return axios({
 		method: "get",
-		//url: `https://min-api.cryptocompare.com/data/${precision}?fsym=${coin}&tsym=USD&limit=${limit}&aggregate=1&e=CCCAGG`
-		url: `https://min-api.cryptocompare.com/data/${precision}?fsym=${coin}&tsym=USD&limit=${limit}&aggregate=1&e=Bitfinex`
+		url: `https://min-api.cryptocompare.com/data/${precision}?fsym=${coin}&tsym=USD&limit=${limit}&aggregate=1&e=CCCAGG`
+		//url: `https://min-api.cryptocompare.com/data/${precision}?fsym=${coin}&tsym=USD&limit=${limit}&aggregate=1&e=Bitfinex`
 
 		//Crypto compare API aggeregation end point keeps breaking
 		//keeping these here for testing until their sereve stops having issues
