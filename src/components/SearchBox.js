@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Select from "react-select";
-//import bat from "@icon/cryptocurrency-icons/icons/bat.svg";
 import coinOptions from "./coinOptions";
 import { withStyles } from "@material-ui/core/styles";
 import coinData from "./coinData";
@@ -14,6 +13,7 @@ const styles = theme => ({
     marginRight: "5%",
     marginLeft: "5%",
     appearance: "none",
+    paddingTop: "20px",
     paddingBottom: "20px"
   }
 });
@@ -36,14 +36,13 @@ class SearchBox extends Component {
   };
   render() {
     const { classes } = this.props;
-    const { selectedOption } = this.state;
-
+    //const { selectedOption } = this.state;
     return (
       <div>
         <Select
           className={classes.searchCon}
           placeholder="Select Token"
-          value={selectedOption}
+          value="Select Token"
           onChange={this.handleChange}
           //coinsOptions returns an array of coin values and label's (names, tickers, and icons)
           options={coinOptions()}
@@ -54,5 +53,3 @@ class SearchBox extends Component {
 }
 
 export default withStyles(styles)(SearchBox);
-
-//<img src={bat} alt="coin"/>

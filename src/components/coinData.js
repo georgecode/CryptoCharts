@@ -2,7 +2,7 @@ import axios from "axios";
 //Crypto Compare API
 //https://min-api.cryptocompare.com/documentation
 
-//API persion options
+//API precision options
 //histoday == daily data
 //histohour == hourly data
 //histominute == minute data

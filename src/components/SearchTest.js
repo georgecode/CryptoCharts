@@ -1,9 +1,8 @@
-
-import React from 'react';
-import Select from 'react-select';
+import React from "react";
+import Select from "react-select";
 import bat from "@icon/cryptocurrency-icons/icons/bat.svg";
 import coinOptions from "./coinOptions";
-let test = `<img src=${bat} alt="coin"/>`
+let test = `<img src=${bat} alt="coin"/>`;
 //https://imgur.com/vFblFqJ
 //console.log(coinOptions())
 //let myMoneyImage = "https://i.imgur.com/vFblFqJ.jpg"
@@ -14,37 +13,33 @@ let test = `<img src=${bat} alt="coin"/>`
 //   { value: 'eth', label: 'ETH' }
 // ];
 
-const options =coinOptions()
- 
+const options = coinOptions();
+
 class SearchTest extends React.Component {
   state = {
-    selectedOption: null,
-  }
-  handleChange = (selectedOption) => {
+    selectedOption: null
+  };
+  handleChange = selectedOption => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
-  }
+  };
   render() {
-  	console.log(test)
+    console.log(test);
     const { selectedOption } = this.state;
- 
+
     return (
-    <div>
-      <Select
-      	placeholder="Select Token"
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-      />
-    </div>  
+      <div>
+        <Select
+          placeholder="Select Token"
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={options}
+        />
+      </div>
     );
   }
 }
 
-export default SearchTest
+export default SearchTest;
 
 //<img src={bat} alt="coin"/>
-
-
-
-

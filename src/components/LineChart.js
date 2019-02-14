@@ -29,9 +29,9 @@ class LineChart extends Component {
 	componentWillReceiveProps(nextProps) {
 		let nextCoin = nextProps.selectedCoin.toUpperCase();
 		//Sets charts Title via highCharts
-		this.chart.setTitle({
-			text: `${nextCoin}/USD`
-		});
+		// this.chart.setTitle({
+		// 	text: `${nextCoin}/USD`
+		// });
 		//sets plot label via HighCharts
 		this.chart.series[0].setName(nextCoin);
 
@@ -54,7 +54,6 @@ class LineChart extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Line Chart</h1>
 				<div
 					ref={ref => {
 						this.chartDiv = ref;
