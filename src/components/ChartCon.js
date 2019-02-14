@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
-//import { stuff, stuff } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import LineChart from "./LineChart";
 import currentCoinPrice from "./currentCoinPrice";
@@ -18,10 +17,8 @@ const styles = theme => ({
 		height: "60px",
 		backgroundColor: "white",
 		margin: "0 auto"
-		//color:"red"
 	},
 	icon: {
-		//padding: 10,
 		width: "50px",
 		height: "50px",
 		marginLeft: "10px",
@@ -30,7 +27,6 @@ const styles = theme => ({
 	},
 	title: {
 		color: theme.palette.secondary.main,
-		//float: "right",
 		fontSize: "1.4em",
 		paddingLeft: "80px",
 		paddingTop: "25px"
