@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Header from "./Header";
 import ChartCon from "./ChartCon";
+import Footer from "./Footer";
 
 const styles = theme => ({
 	themeExample: {
@@ -42,6 +43,7 @@ class Home extends Component {
 					sendSearchData={this.getSearchData}
 				/>
 				<ChartCon selectedCoin={this.state.selectedCoin} />
+				<Footer />
 			</div>
 		);
 	}
