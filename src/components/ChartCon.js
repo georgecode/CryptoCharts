@@ -50,7 +50,8 @@ class ChartCon extends Component {
 		//**********************
 		//un-comment for price polling keeping off during development
 		//so I'm not spaming cryptocompare serve
-		setInterval(this.pollPriceData, 1000);
+		//setInterval(this.pollPriceData, 1000);
+		setInterval(this.pollPriceData, 3600000);
 		//**********************
 	} //END componentDidMount()
 
