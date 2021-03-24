@@ -37,11 +37,16 @@ export default props => {
       //middle Green
       secondary: { main: "#7A9F35" },
       myBlue: "#343477",
+      myOrange:"#f79331"
     },
     typography: {
       //fixes deprecated typography variants warning
       useNextVariants: true,
       //fontFamily: '"Arial", Helvetica, sans-serif'
+      //This sets Global Typography text color
+      allVariants: {
+        color: "#ffffff"
+      },
     },
 
   });

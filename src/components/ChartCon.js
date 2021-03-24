@@ -120,4 +120,3 @@ class ChartCon extends Component {
 }
 
 export default withStyles(styles)(ChartCon);
-//<LineChart selectedCoin={this.state.selectedCoin}  />
